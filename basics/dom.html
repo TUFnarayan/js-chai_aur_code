@@ -15,14 +15,27 @@
 </head>
 <body>
     <div class="parent">
-     <div class1="child">c1</div>
-     <div class2="child">c2</div>
-     <div class3="child">c3</div>
-     <div class4="child">c4</div>
+     <div class="child">c1</div>
+     <div class="child">c2</div>
+     <div class="child">c3</div>
+     <div class="child">c4</div>
 
 
 
     </div>
- <script src="hello.js"></script>
+    <input type='number' id="in" placeholder="1-create/0-end">
+    <button id="submit" onclick="process()">submit</button>
+ <script>
+function addiv(cname,iname,color,txt){
+    let div=document.createElement('div');
+    div.className=cname;
+    div.id=iname;
+    div.style.backgroundColor=color;
+    div.innerText=txt;
+    document.body.appendChild(div);
+}
+ addiv('nar','ar','blue','hii');
+   
+ </script>
 </body>
 </html>
