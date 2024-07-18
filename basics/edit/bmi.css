@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+body{
+    background-color: grey;
+}
+input{
+    width: 100px;
+}
+button{
+    width: 100px;
+}

@@ -1,0 +1,50 @@
+//edit and remove elements
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom2</title>
+</head>
+<body style="background-color: wheat;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    
+</body>
+<script>
+//not optimised(traverses a lot while adding txt node in li)
+    function addlanguage(name)
+{  const li=document.createElement('li');
+  li.innerHTML=`${name}`;
+  document.querySelector('.language').appendChild(li);}
+  addlanguage('python');
+  addlanguage('typescript');
+
+//optimised approach(doesnt traverse whole li while inserting txt node in li )
+
+  function opti(lang){
+  const li=document.createElement('li');
+  li.appendChild(document.createTextNode(lang))
+  document.querySelector('.language').appendChild(li);}
+  opti('ruby');
+
+
+  //edit elements
+//m1. using seclang.innerhtml='mojo'
+//m2.
+const seclang=document.querySelector("li:nth-child(2)");
+const newli=document.createElement('li');
+newli.innerHTML="asphalt";
+seclang.replaceWith(newli);
+const rep1= document.querySelector('li:nth-child(1)');
+const prey=document.createElement('li');
+prey.textContent="c++";
+rep1.replaceWith(prey);
+
+//remove element
+const rem=document.querySelector('li:last-child');
+rem.remove();
+
+    </script>
+</html>

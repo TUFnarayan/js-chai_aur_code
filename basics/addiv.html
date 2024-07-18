@@ -1,4 +1,6 @@
+//adding new div
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,14 +28,14 @@
     <input type='number' id="in" placeholder="1-create/0-end">
     <button id="submit" onclick="process()">submit</button>
  <script>
-function addiv(cname,iname,color,txt){
+function addiv(cname,iname,color,txt)
     let div=document.createElement('div');
     div.className=cname;
     div.id=iname;
     div.style.backgroundColor=color;
     div.innerText=txt;
     document.body.appendChild(div);
-}
+
  addiv('nar','ar','blue','hii');
    
  </script>
