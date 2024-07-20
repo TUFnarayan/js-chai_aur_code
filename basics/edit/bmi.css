@@ -1,4 +1,4 @@
-.container{
+/* .container{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -11,4 +11,114 @@ input{
 }
 button{
     width: 100px;
+} */
+
+
+/* bmi.css */
+
+/* bmi.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #666;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.guide {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.guide h3 {
+    color: #333;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.guide h2 {
+    margin-bottom: 10px;
+}
+
+/* Background Animation */
+@keyframes bgAnimation {
+    0% { background-color: #ff9a9e; }
+    25% { background-color: #fad0c4; }
+    50% { background-color: #fbc2eb; }
+    75% { background-color: #a18cd1; }
+    100% { background-color: #ff9a9e; }
+}
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: bgAnimation 10s infinite;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.animated-bg.active {
+    opacity: 1;
 }

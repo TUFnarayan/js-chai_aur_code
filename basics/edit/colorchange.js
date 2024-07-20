@@ -4,6 +4,8 @@ const body=document.querySelector('body');
 buttons.forEach(function(button){
 button.addEventListener('click',function(e){
     console.log(e);
+
+    //target is element jispe event hoga ab
     console.log(e.target)
     if(e.target.id=='grey'){
         body.style.backgroundColor='grey';
